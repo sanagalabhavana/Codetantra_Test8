@@ -1,0 +1,41 @@
+package Day_6;
+class Person {
+	private String name;
+	private int age;
+	public Person(String name,int age) {
+		this.name=name;
+		this.age=age;
+	}
+	public void display1() {
+		System.out.println("Name: "+name);
+		System.out.println("Age: "+age);
+	
+	}
+}
+
+class Student extends Person{
+	private int studentId;
+	public Student(String name,int age,int studentId) {
+		super(name,age);
+		this.studentId=studentId;
+	}
+	public void display2() {
+		super.display1();
+		System.out.println("StudentID: "+studentId);
+		
+	}
+}
+
+public class Inheritance_ex_Student {
+
+	public static void main(String[] args) {
+		String name=args[0];
+		int age=Integer.parseInt(args[1]);
+		int studentId=Integer.parseInt(args[2]);
+		Student student=new Student(name,age,studentId);
+		System.out.println("Student Information:");
+		student.display2();
+
+	}
+
+}
