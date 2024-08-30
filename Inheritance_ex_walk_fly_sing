@@ -1,0 +1,38 @@
+package Day_6;
+
+class Animal{
+	public void walk() {
+		System.out.println("I am walking");
+	}
+}
+class Bird extends Animal{
+	public void fly() {
+		System.out.println("I am flying");
+	}
+	public void sing() {
+		System.out.println("I am singing");
+	}
+}
+
+public class Inheritance_ex_walk_fly_sing {
+
+	public static void main(String[] args) {
+		Bird bird=new Bird();
+		String action=args[0].toLowerCase();
+		switch(action) {
+		case "walk" :
+			bird.walk();
+			break;
+		case "fly":
+			bird.fly();
+			break;
+		case "sing":
+			bird.sing();
+			break;
+		default:
+			System.out.println("Invalid action. Use 'walk' ,'fly' or 'sing'. ");
+		}
+
+	}
+
+}
