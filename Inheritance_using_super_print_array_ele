@@ -1,0 +1,39 @@
+package Day_6;
+class ECart{
+	public String[] items;
+	public void itemsLen(int len) {
+		items =new String[len];
+	}
+	public void display() {
+		System.out.println("The items in your cart are: ");
+		for(int i=0;i<items.length;i++) {
+			System.out.println(items[i]);
+		}
+	}
+}
+class Customer extends ECart{
+	public void addItems(String[] ele) {
+		super.itemsLen(ele.length);
+		for(int i=0;i<ele.length;i++) {
+			items[i]=ele[i];
+		}
+		super.display();
+	}
+}
+
+
+
+
+public class Inheritance_using_super_print_array_ele {
+
+	public static void main(String[] args) {
+		Customer c1=new Customer();
+		String[] NumOfItems=new String[args.length];
+		for(int i=0;i<args.length;i++) {
+			NumOfItems[i]=args[i];
+		}
+		c1.addItems(NumOfItems);
+
+	}
+
+}
