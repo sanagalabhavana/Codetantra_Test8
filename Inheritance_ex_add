@@ -1,0 +1,26 @@
+package Day_6;
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Inheritance_ex_add {
+   class Arithmetic{
+	   public int add(int a,int b) {
+		   return a+b;
+	   }
+   }
+	
+	class Adder extends Arithmetic{
+		
+	}
+	public static void main(String[] args) {
+		Adder a = new Adder();
+		System.out.println("My superclass is: "+a.getClass().getSuperclass().getName());
+        int n1=Integer.parseInt(args[0]);
+        int n2=Integer.parseInt(args[1]);
+        System.out.println(a.add(10, 32)+" "+a.add(n1, n2)+"/n");
+	}
+
+}
